@@ -706,10 +706,6 @@ body:is(.dark *){
   max-height: 22rem;
 }
 
-.max-h-\[20rem\]{
-  max-height: 20rem;
-}
-
 .min-h-screen{
   min-height: 100vh;
 }
