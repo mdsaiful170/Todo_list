@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header
+      class="fixed left-0 right-0 top-0 z-50 border-b border-darkColor border-opacity-15 bg-WhiteColor py-3 shadow-sm dark:border-slate-700 dark:bg-darkColor dark:shadow-sm"
+    >
+      <div class="container mx-auto flex items-center px-3">
+        <!-- log -->
+        <a href="#">
+          <h1 class="md:xl text-lg font-semibold lg:text-2xl">
+            Safiul<span
+              class="font-spaceMono capitalize text-fuchsia-700 dark:text-fuchsia-400"
+              >ToDo</span
+            >List
+          </h1>
+        </a>
+
+        <div class="ms-auto flex items-center gap-4 lg:gap-5">
+          <div>
+            <!-- dark mode div section -->
+            <i
+              class="ri-moon-clear-fill cursor-pointer text-xl hover:text-fuchsia-700 dark:hover:text-fuchsia-400 lg:text-2xl"
+              id="theme-btn"
+            ></i>
+          </div>
+          <!-- normal button -->
+          <button
+            class="inline-block rounded-full bg-fuchsia-700 px-4 py-2 text-base font-semibold text-WhiteColor transition duration-200 hover:bg-darkColor hover:text-white dark:text-WhiteColor dark:hover:bg-WhiteColor dark:hover:text-darkColor md:text-lg lg:px-4 lg:py-2"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- main body -->
+    <main
+      class="relative flex min-h-screen items-center justify-center overflow-hidden px-3"
+      id="main"
+    >
+      <!-- extra color -->
+      <div
+        class="absolute left-0 top-0 h-60 w-80 bg-violet-500 opacity-35 blur-[150px] dark:opacity-35 dark:mix-blend-screen"
+      ></div>
+      <!-- extra color -->
+      <div
+        class="absolute bottom-0 right-0 h-72 w-80 bg-green-500 opacity-35 blur-[150px] dark:opacity-35 dark:mix-blend-screen"
+      ></div>
+
+      <!-- full box -->
+      <section
+        class="w-full max-w-xl rounded border border-stone-300 bg-WhiteColor p-2 shadow-sm shadow-darkColor/50 dark:border-slate-800 dark:bg-darkColor"
+      >
+        <div
+          class="absolute -z-10 h-[60%] w-[50%] -translate-x-16 -translate-y-20 rounded-full bg-red-500 opacity-20 mix-blend-color-burn blur-[180px] dark:opacity-25 dark:mix-blend-screen"
+        ></div>
+        <div>
+          <!-- delete all button and header text -->
+          <div
+            class="relative flex items-center justify-between lg:justify-center"
+          >
+            <h1
+              class="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text py-2 text-center text-2xl font-extrabold text-transparent lg:text-4xl"
+            >
+              To-do List
+            </h1>
+
+            <!-- delete all -->
+            <button
+              id="all"
+              class="absolute right-[.5rem] rounded-full border border-stone-300 px-3 hover:text-red-500 dark:border-slate-700"
+            >
+              ClearAll
+              <i
+                class="ri-delete-bin-5-fill text-lg font-bold text-fuchsia-600"
+              ></i>
+            </button>
+          </div>
+          <!-- to-do list add button -->
+          <input
+            type="text"
+            id="addToListInput"
+            required
+            name="text"
+            placeholder="Enter you todo item"
+            class="w-full rounded-md border border-stone-300 bg-transparent px-2 py-2 font-spaceMono text-lg font-normal outline-none focus:border-fuchsia-500 focus:outline-none valid:focus:border-green-400 invalid:focus:border-fuchsia-500 dark:border-slate-700 dark:text-slate-300"
+          />
+
+          <!-- todo list add button -->
+          <button
+            id="addTodoBtn"
+            class="text-mono my-2 block w-full rounded-sm border-0 bg-blue-500 py-[.3rem] text-xl font-bold text-WhiteColor outline-none transition-all duration-150 hover:bg-darkColor hover:tracking-[.1rem] hover:text-WhiteColor dark:hover:bg-WhiteColor dark:hover:text-darkColor"
+          >
+            Add
+          </button>
+        </div>
+
+        <!-- todo lis box -->
+        <ul
+          id="todo-list"
+          class="max-h-[20rem] list-none !overflow-y-auto p-0 lg:max-h-[16rem]"
+        ></ul>
+
+        <p class="text-textlighColor text-[8px] lg:text-[12px] font-extralight pt-2  text-center">
+          @2024 Md Saiful Islam. All rights reserved. (Student at hablu-programmer😇)
+        </p>
+      </section>
+
+      
+    </main>
+
+   
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+

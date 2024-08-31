@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply m-0 overflow-x-hidden p-0;
+  }
+}
+
+@layer components {
+  #all:hover i {
+    @apply text-red-500;
+  }
+  body {
+    @apply box-border bg-WhiteColor font-mono text-darkColor transition-all duration-150 dark:bg-darkColor dark:text-WhiteColor;
+  }
+}
+
+@layer utilities {
+  @media (max-width: 768px) {
+    html {
+      font-size: 70%;
+    }
+  }
+  @media (max-width: 450px) {
+    html {
+      font-size: 48%;
+    }
+  }
+}
